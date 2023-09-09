@@ -2,6 +2,7 @@
 function threeSum(arr, target) {
 // write your code here
 	let result=Number.MAX_SAFE_INTEGER;
+	let final_sum;
 	for(let i=0;i<arr.length-2;i++){
 		
 		for(let j=i+1;j<arr.length-1;j++){
@@ -11,12 +12,12 @@ function threeSum(arr, target) {
 				let final=Math.abs(target-sum);
 				if(result>final){
 					result=final;
-				}
+					final_sum=sum;
 				
 			}
 		}
 	}
-	return result;
+	return final_sum;
   
 }
 
