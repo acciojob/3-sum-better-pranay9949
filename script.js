@@ -1,22 +1,26 @@
+
 function threeSum(arr, target) {
 // write your code here
-	let sum=0;
+	let result=Number.MAX_SAFE_INTEGER;
 	for(let i=0;i<arr.length-2;i++){
 		
-		for(let j=i+1;j<length-1;j++){
-			for(let k=i+2;k<length;k++){
+		for(let j=i+1;j<arr.length-1;j++){
+			for(let k=i+2;k<arr.length;k++){
 				
-			   sum=arr[i]+arr[j]+arr[k];
+			   let sum=arr[i]+arr[j]+arr[k];
 				let final=Math.abs(target-sum);
-				if(sum>final){
-					sum=final;
+				if(result>final){
+					result=final;
 				}
 				
 			}
 		}
 	}
-	return sum;
+	return result;
   
 }
+
+
+
 
 module.exports = threeSum;
